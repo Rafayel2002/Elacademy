@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>El Academy | Knowledge Center</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&amp;family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e1e3e4",
+                        "on-secondary-container": "#745c00",
+                        "on-secondary-fixed-variant": "#574500",
+                        "tertiary": "#010203",
+                        "surface-bright": "#f9f9ff",
+                        "secondary-fixed-dim": "#e9c34c",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#191c1d",
+                        "surface-tint": "#515d84",
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "on-tertiary-fixed-variant": "#454748",
+                        "background": "#f9f9ff",
+                        "surface-container-high": "#e5e8f3",
+                        "on-surface-variant": "#45464e",
+                        "on-background": "#181c23",
+                        "secondary-container": "#fed65d",
+                        "secondary": "#735c00",
+                        "outline-variant": "#c6c6cf",
+                        "surface-container-highest": "#dfe2ed",
+                        "primary": "#00020e",
+                        "inverse-on-surface": "#edf0fc",
+                        "inverse-primary": "#b9c5f2",
+                        "primary-fixed": "#dbe1ff",
+                        "inverse-surface": "#2c3039",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f0f3ff",
+                        "surface": "#f9f9ff",
+                        "tertiary-container": "#1a1d1e",
+                        "on-primary-fixed": "#0b1a3d",
+                        "surface-container": "#ebedf9",
+                        "surface-dim": "#d7dae5",
+                        "on-primary-fixed-variant": "#39456b",
+                        "on-primary-container": "#7784ad",
+                        "surface-variant": "#dfe2ed",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#ffe088",
+                        "primary-fixed-dim": "#b9c5f2",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#181c23",
+                        "on-error-container": "#93000a",
+                        "outline": "#76767f",
+                        "primary-container": "#0d1b3e",
+                        "on-tertiary-container": "#838586",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#241a00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "stack-sm": "12px",
+                        "margin-desktop": "40px",
+                        "stack-md": "24px",
+                        "stack-lg": "48px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Source Serif 4"],
+                        "body-lg": ["Manrope"],
+                        "headline-md": ["Source Serif 4"],
+                        "display-lg": ["Source Serif 4"],
+                        "body-md": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "headline-lg-mobile": ["Source Serif 4"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ambient-shadow {
+            box-shadow: 0px 4px 20px rgba(13, 27, 62, 0.08);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(249, 249, 255, 0.9) 0%, rgba(240, 243, 255, 0.7) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar Component -->
+<nav class="bg-surface dark:bg-surface-container w-full top-0 sticky z-50 border-b border-outline-variant dark:border-outline flat no shadows">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
+<!-- Brand -->
+<a class="flex items-center gap-2 group" href="#">
+<img alt="El Academy Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb1mVIJZuPbojK4IreNqfrJb_Qx2SQ-_Ne1VXdCQ4LwxYOrGhMoXcsr0uNv_1yEn9zHYBJZ1I_q_4fsZ8xZiVR77t98r7WZBndOFASDM01uN-oruqYmUYH1QyX9szqkrbCE01OtnTyv0Z0opsbJvFR0g6_6lGEKU1i4R3TGpHS9OUOUTW1HmXY_6MmGAsx0WbLqsvxz14iGbvz5L2umLwRRXehi9aE3HDVlFqOGGpf90_iG1KZD8rpO2mIrrwKn5U5yJxVT165_bY"/>
+<span class="text-headline-md font-headline-md font-bold text-primary dark:text-inverse-primary group-hover:opacity-80 transition-opacity hidden md:block">El Academy</span>
+</a>
+<!-- Navigation Links -->
+<ul class="hidden md:flex items-center gap-8">
+<li>
+<a class="font-label-md text-label-md text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary pb-1 inline-block" href="#">Services</a>
+</li>
+<li>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all px-3 py-2 rounded-DEFAULT" href="#">About Us</a>
+</li>
+<li>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all px-3 py-2 rounded-DEFAULT" href="#">Contact</a>
+</li>
+</ul>
+<!-- Trailing Action -->
+<div class="flex items-center">
+<button class="bg-primary-container text-on-primary-container font-label-md text-label-md px-6 py-3 rounded-lg hover:bg-primary-fixed hover:text-on-primary-fixed transition-all active:scale-95 flex items-center gap-2">
+<span>Register</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full py-20 lg:py-32 overflow-hidden bg-surface-container-low">
+<div class="absolute inset-0 z-0">
+<img alt="Students learning" class="w-full h-full object-cover opacity-20 mix-blend-multiply" data-alt="A bright, modern educational setting in Armenia, featuring students engaged in learning within a sunlit, airy classroom. The atmosphere is warm and inviting, capturing the essence of accessible excellence. Soft, natural lighting highlights the collaborative environment, embodying a contemporary academic aesthetic with subtle navy and yellow accents in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_PAk4XTTfB0BUXChJ2HZ-oPFCOzVHoMVWq5W85priyS2__FjJ_D9whPo65-pEbLjguFlQeYCUd1yPP5S3tkSolYh8Z1dul4cgPC7Di897xUk9ZBy-IdFFUtbbsjFxX0f_-BFfId8G2ofOxCeRyEOg8ljnScvVcvHZFNfLju2IH9R7HNXtwIa8M9r5H_JlRARGh1bj9PuFtDSKOvy3Mr7AsJbd5rllj47a7mhBe4DjM7j9uHJAn8K2kP98ALq4QwrAIu0DWZ51Xas"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/90 to-transparent"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10 flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-3/5 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container rounded-full mb-2">
+<span class="material-symbols-outlined text-on-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-label-md text-label-md text-on-secondary-container uppercase tracking-wider">Knowledge Center</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary md:pr-12">
+                        Master Languages with Accessible Excellence
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        Join our community-driven academy designed for students and professionals. Experience structured, contemporary learning in English, Spanish, and foundational subjects.
+                    </p>
+<div class="pt-4 flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-8 py-4 rounded-lg hover:bg-on-surface transition-all active:scale-95 shadow-md hover:shadow-lg flex items-center gap-2">
+                            Explore Courses
+                            <span class="material-symbols-outlined">explore</span>
+</button>
+<button class="bg-secondary-container text-on-secondary-container font-label-md text-label-md px-8 py-4 rounded-lg hover:bg-secondary-fixed transition-all active:scale-95 border border-transparent flex items-center gap-2">
+                            Book a Trial
+                            <span class="material-symbols-outlined">event_available</span>
+</button>
+</div>
+</div>
+<div class="w-full md:w-2/5 hidden md:block">
+<!-- Bento Grid Style Hero Visual -->
+<div class="grid grid-cols-2 gap-4">
+<div class="col-span-2 rounded-2xl overflow-hidden h-48 relative ambient-shadow group border border-outline-variant bg-white">
+<img alt="Study materials" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close up of a modern textbook and a stylish pen resting on a clean white desk. The lighting is crisp and editorial, casting soft shadows. The setting conveys serious academic pursuit and structured learning, aligning with a corporate modern educational aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqfbSvbTUNPibYePRGNhNfBUe8LIyhBtb9CGqAKT0t18OTY3I19E19e2WAGjGfsRTDfRjl_69nZLOByQ6FnHCYpTZPz2elci2hEJVdrRL9cp1sP0-QV_kC2ppoR1atAfUdWnjPDnf3-cF8cjrnMYCHDoIJflk8k4UAmcYi6KsHCg3U-elQBRbZnzpfu0q2gXZU4vDSfLW18sifwwVc0RrStxf3yfNyQFKnRDdX2NYLQTk0AU5frq6WQrYi-I4dyFD5kKdJxPsR950"/>
+<div class="absolute bottom-4 left-4 bg-surface/90 backdrop-blur-sm px-4 py-2 rounded-lg border border-outline-variant/50">
+<span class="font-label-md text-label-md text-primary block">Structured</span>
+</div>
+</div>
+<div class="rounded-2xl overflow-hidden h-36 relative ambient-shadow group border border-outline-variant bg-secondary-container flex items-center justify-center p-6">
+<div class="text-center">
+<span class="material-symbols-outlined text-4xl text-on-secondary-container mb-2 block" style="font-variation-settings: 'FILL' 1;">language</span>
+<span class="font-headline-md text-headline-md text-on-secondary-container block leading-none">3+</span>
+<span class="font-label-md text-label-md text-on-secondary-container/80 uppercase">Languages</span>
+</div>
+</div>
+<div class="rounded-2xl overflow-hidden h-36 relative ambient-shadow group border border-outline-variant bg-primary flex items-center justify-center p-6">
+<div class="text-center">
+<span class="material-symbols-outlined text-4xl text-secondary-container mb-2 block" style="font-variation-settings: 'FILL' 1;">groups</span>
+<span class="font-headline-md text-headline-md text-on-primary block leading-none">500+</span>
+<span class="font-label-md text-label-md text-on-primary/80 uppercase">Students</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Grid Layout) -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16 md:w-2/3">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Educational Services</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Tailored programs designed to foster linguistic proficiency and academic excellence across all age groups.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- English Classes (Large Card) -->
+<div class="md:col-span-8 bg-surface border border-outline-variant rounded-xl p-8 hover:-translate-y-1 transition-transform duration-300 ambient-shadow group relative overflow-hidden flex flex-col justify-between min-h-[320px]">
+<div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[120px] text-primary">forum</span>
+</div>
+<div class="relative z-10">
+<div class="w-12 h-12 bg-primary-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">English Classes</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                                Comprehensive English language programs focusing on fluency, business communication, and academic preparation. Experience our immersive curriculum.
+                            </p>
+</div>
+<div class="relative z-10 mt-8">
+<a class="inline-flex items-center gap-2 font-label-md text-label-md text-primary group-hover:text-on-primary-container transition-colors" href="#">
+                                Explore Syllabus <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Spanish Classes (Tall Card) -->
+<div class="md:col-span-4 bg-surface border border-outline-variant rounded-xl p-8 hover:-translate-y-1 transition-transform duration-300 ambient-shadow group relative overflow-hidden flex flex-col justify-between min-h-[320px]">
+<div class="relative z-10">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Spanish Classes</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                Dive into the rich culture and language of the Spanish-speaking world with native instructors and interactive methodologies.
+                            </p>
+</div>
+<div class="relative z-10 mt-8">
+<a class="inline-flex items-center gap-2 font-label-md text-label-md text-primary group-hover:text-on-secondary-container transition-colors" href="#">
+                                View Timetable <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Summer School -->
+<div class="md:col-span-6 bg-surface-container-low border border-outline-variant rounded-xl p-8 hover:-translate-y-1 transition-transform duration-300 ambient-shadow group flex items-start gap-6">
+<div class="shrink-0 w-16 h-16 bg-surface border border-outline-variant rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">wb_sunny</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Summer School</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                                Intensive, fun, and engaging summer programs to keep skills sharp and learn new ones during the break.
+                            </p>
+<a class="font-label-md text-label-md text-primary underline hover:text-on-primary-container transition-colors" href="#">Enroll for Summer</a>
+</div>
+</div>
+<!-- Classes for School Children -->
+<div class="md:col-span-6 bg-surface-container-low border border-outline-variant rounded-xl p-8 hover:-translate-y-1 transition-transform duration-300 ambient-shadow group flex items-start gap-6">
+<div class="shrink-0 w-16 h-16 bg-surface border border-outline-variant rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">child_care</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Classes for School Children</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                                Foundation building and tutoring tailored for young minds, ensuring academic success from an early age.
+                            </p>
+<a class="font-label-md text-label-md text-primary underline hover:text-on-primary-container transition-colors" href="#">View Age Groups</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-primary-container dark:bg-primary-container w-full bottom-0 border-t border-outline-variant dark:border-outline flat no shadows mt-auto">
+<div class="max-w-container-max mx-auto px-margin-desktop py-stack-lg grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Brand Column -->
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<span class="font-headline-md text-headline-md text-on-primary-container">El Academy</span>
+<p class="font-body-md text-body-md text-on-primary-container/80">
+                    Accessible Excellence in language education.
+                </p>
+</div>
+<!-- Links Column 1 -->
+<div class="col-span-1 flex flex-col gap-3">
+<a class="font-label-md text-label-md text-on-primary-container/80 hover:text-on-primary-container transition-colors hover:underline" href="#">English Classes</a>
+<a class="font-label-md text-label-md text-on-primary-container/80 hover:text-on-primary-container transition-colors hover:underline" href="#">Spanish Classes</a>
+<a class="font-label-md text-label-md text-on-primary-container/80 hover:text-on-primary-container transition-colors hover:underline" href="#">Summer School</a>
+</div>
+<!-- Links Column 2 -->
+<div class="col-span-1 flex flex-col gap-3">
+<a class="font-label-md text-label-md text-on-primary-container/80 hover:text-on-primary-container transition-colors hover:underline" href="#">Classes for School Children</a>
+<a class="font-label-md text-label-md text-on-primary-container/80 hover:text-on-primary-container transition-colors hover:underline" href="#">Contact Us</a>
+<a class="font-label-md text-label-md text-on-primary-container/80 hover:text-on-primary-container transition-colors hover:underline" href="#">Privacy Policy</a>
+</div>
+<!-- Copyright Column -->
+<div class="col-span-1 md:col-span-1 flex flex-col justify-end">
+<p class="font-body-md text-body-md text-on-primary-container/60 text-sm">
+                    © 2024 El Academy Knowledge Center. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>
