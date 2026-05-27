@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us - El Academy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e1e3e4",
+                        "on-secondary-container": "#745c00",
+                        "on-secondary-fixed-variant": "#574500",
+                        "tertiary": "#010203",
+                        "surface-bright": "#f9f9ff",
+                        "secondary-fixed-dim": "#e9c34c",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#191c1d",
+                        "surface-tint": "#515d84",
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "on-tertiary-fixed-variant": "#454748",
+                        "background": "#f9f9ff",
+                        "surface-container-high": "#e5e8f3",
+                        "on-surface-variant": "#45464e",
+                        "on-background": "#181c23",
+                        "secondary-container": "#fed65d",
+                        "secondary": "#735c00",
+                        "outline-variant": "#c6c6cf",
+                        "surface-container-highest": "#dfe2ed",
+                        "primary": "#00020e",
+                        "inverse-on-surface": "#edf0fc",
+                        "inverse-primary": "#b9c5f2",
+                        "primary-fixed": "#dbe1ff",
+                        "inverse-surface": "#2c3039",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f0f3ff",
+                        "surface": "#f9f9ff",
+                        "tertiary-container": "#1a1d1e",
+                        "on-primary-fixed": "#0b1a3d",
+                        "surface-container": "#ebedf9",
+                        "surface-dim": "#d7dae5",
+                        "on-primary-fixed-variant": "#39456b",
+                        "on-primary-container": "#7784ad",
+                        "surface-variant": "#dfe2ed",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#ffe088",
+                        "primary-fixed-dim": "#b9c5f2",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#181c23",
+                        "on-error-container": "#93000a",
+                        "outline": "#76767f",
+                        "primary-container": "#0d1b3e",
+                        "on-tertiary-container": "#838586",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#241a00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "stack-sm": "12px",
+                        "margin-desktop": "40px",
+                        "stack-md": "24px",
+                        "stack-lg": "48px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Source Serif 4"],
+                        "body-lg": ["Manrope"],
+                        "headline-md": ["Source Serif 4"],
+                        "display-lg": ["Source Serif 4"],
+                        "body-md": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "headline-lg-mobile": ["Source Serif 4"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-surface-container full-width top-0 sticky z-50 border-b border-outline-variant dark:border-outline">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-inverse-primary">
+                El Academy
+            </div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all px-4 py-2 rounded" href="#">Services</a>
+<a class="font-label-md text-label-md text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary pb-1 hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all px-4 py-2 rounded" href="#">About Us</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all px-4 py-2 rounded" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2 rounded font-label-md text-label-md hover:scale-105 transition-transform">Register</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg md:py-24">
+<div class="text-center max-w-3xl mx-auto space-y-stack-md">
+<h1 class="font-display-lg text-display-lg text-primary">Accessible Excellence in Armenia</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    El Academy Knowledge Center was founded with a singular vision: to bridge the gap between traditional educational prestige and modern, community-driven language acquisition in the heart of Yerevan.
+                </p>
+</div>
+</section>
+<!-- Our Story & Mission Bento -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Main Image -->
+<div class="md:col-span-8 rounded-xl overflow-hidden border border-outline-variant shadow-sm bg-surface-container-lowest">
+<img alt="Students studying in a modern, bright library at El Academy." class="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700" data-alt="A modern, bright academic library interior at El Academy. Natural light floods through large windows, illuminating pristine wooden desks and rows of high-end bookshelves. Several students are quietly focused on their laptops and textbooks. The atmosphere is serene, serious, yet inviting, reflecting a premium corporate modern aesthetic with high-key lighting, soft white tones, and subtle navy blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1bqGulfDAN6PZS_tsJsZdwDlKWKu-LiVfM6nJsanR4hwvKBP7WXIyHxJABEpSQqqHkVEYmB4awey-Z2XbXULRWn0WUqwIPdE2thK1cuheFJXga4Re8fwgQQXZF2h3xBZ4NP--MxgkgDLz-22kuPaHt6crxjJk45dnYKavwu0pVaPhkur_DhvHDKYqzgP-qZy7kva9NcCxEWudPJe1ZyMK0ig9deBoiGHmufbhs8oQ2w4v6x25WudsK5ISmttfjK0Na6YMOuWsaCY"/>
+</div>
+<!-- Mission Box -->
+<div class="md:col-span-4 bg-primary-container text-on-primary-container rounded-xl p-stack-md flex flex-col justify-center border border-primary-container">
+<span class="material-symbols-outlined text-4xl mb-4" data-icon="school" data-weight="fill">school</span>
+<h3 class="font-headline-md text-headline-md mb-2">Our Mission</h3>
+<p class="font-body-md text-body-md opacity-90">
+                        To empower students and professionals in Armenia with world-class language skills, fostering clarity, ambition, and a frictionless journey towards global communication and academic success.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Instructors Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary">Meet Our Instructors</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Dedicated educators bringing academic editorial excellence to every class.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Instructor 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-stack-md hover:shadow-[0px_4px_20px_rgba(13,27,62,0.08)] hover:-translate-y-[2px] transition-all duration-300">
+<div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-surface-container">
+<img alt="Portrait of Dr. Anahit Petrosyan" class="w-full h-full object-cover" data-alt="A professional headshot of a female professor, Dr. Anahit Petrosyan, standing in a brightly lit academic corridor. She is wearing a smart navy blue blazer over a crisp white shirt, exuding warmth and authority. The background is slightly blurred but suggests a modern educational facility with clean lines and soft, natural lighting. The overall mood is approachable, intelligent, and trustworthy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCW9dJM8eCEQ4Af5kVjPSRi7D0iGatrf8eU1zqjDQO3kANXnlebT9RrYGo4J-Biil36T1Wzj3ZvlXX8-SuLImSuC8oCCInvj-2XWoKMFb3oMcedNtSpQ0bpQKa8VSWYun0ycRv5IM0NH-bVeDRuP8ceNUH8h78akdMlpNb4XfYdg_7v9sAD_ZHlV_DnfAvQSVgpwlCZ0_7VJ5wleyPLomvM6ch7A2AgDCgXROVeQuBu1kz1CC8RF8e5i8jBylP3aSbFPZHvHhT35k"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-center text-primary mb-1">Dr. Anahit Petrosyan</h4>
+<p class="font-label-md text-label-md text-center text-on-surface-variant mb-4 uppercase tracking-wider">Head of English</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-center">
+                        With over 15 years of experience in higher education, Dr. Petrosyan specializes in advanced syntax and academic writing, guiding students toward fluency and structural mastery.
+                    </p>
+</div>
+<!-- Instructor 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-stack-md hover:shadow-[0px_4px_20px_rgba(13,27,62,0.08)] hover:-translate-y-[2px] transition-all duration-300">
+<div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-surface-container">
+<img alt="Portrait of Prof. Aram Khachatryan" class="w-full h-full object-cover" data-alt="A confident professional portrait of a male instructor, Prof. Aram Khachatryan, standing in a contemporary classroom. He is dressed in a tailored grey suit with a subtle yellow tie, embodying the brand's secondary color. The classroom setting behind him features a sleek whiteboard and minimalist desks, lit by soft, bright daylight to convey an airy, premium educational environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoNVp9-HgBOvaQSEghCAAQGSkdnfAYd9pusyEEWgH4PGCNFIbJir85hMIe99mo9RRy8z1PG_xIK-NPtNZLqGQPOnQrWI_YseS7TehlM1aLmxFYAa7SdTdOuoJUlPQiDlppVxDs1fosNizpneE2g2iFegPF-W2Nz_-LlCLqQMGbFA35sz_pbqxDY0bH1rADsW88NsIabKICDBTV48OuNFErUxBEQCVjdtU6OatMVApTgiB3n2jawzAm-OCxOd-MVcwW5zv5pyVJwXg"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-center text-primary mb-1">Aram Khachatryan</h4>
+<p class="font-label-md text-label-md text-center text-on-surface-variant mb-4 uppercase tracking-wider">Lead Spanish Instructor</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-center">
+                        Aram brings the vibrancy of Hispanic cultures to his rigorous language curriculum, focusing on immersive conversational techniques and contemporary literature.
+                    </p>
+</div>
+<!-- Instructor 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-stack-md hover:shadow-[0px_4px_20px_rgba(13,27,62,0.08)] hover:-translate-y-[2px] transition-all duration-300">
+<div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-surface-container">
+<img alt="Portrait of Lilit Hovhannisyan" class="w-full h-full object-cover" data-alt="A warm, engaging portrait of a young female teacher, Lilit Hovhannisyan, in a bright, modern school lobby. She is casually but professionally dressed, smiling warmly. The environment is airy and clean, with high-key lighting highlighting the pristine white walls and subtle academic decor. The mood is friendly, supportive, and aligns with an accessible yet excellent educational standard." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4NKVCU8WUwyiKnceeb-oFb8MF0b-wN_tL3wsvecUevV4WcfSteINjyGpXlv-htIYgLm2CBBp1jh_M9roOvUJ26Kuif4--86GibI586u4LVnyRF7Laku_kWAISNryPXiKY5t8j_6aQeHtmapm6RoYy8jOjX-U6uPHpTxM5N5HpCBehuDxxJmuVNW6EJ4LctLcKb0A0ECFi6c_ge6k_M0aduwJn5PdihmN6CqcN1e0pTh9c2ONxTgLFLoHTF_8UUaOibt7D1qKXDLk"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-center text-primary mb-1">Lilit Hovhannisyan</h4>
+<p class="font-label-md text-label-md text-center text-on-surface-variant mb-4 uppercase tracking-wider">Youth Programs Coordinator</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-center">
+                        Lilit designs engaging, structured programs for school children and summer camps, ensuring a frictionless and joyful foundation in early language learning.
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container dark:bg-primary-container full-width bottom-0 border-t border-outline-variant dark:border-outline mt-auto">
+<div class="max-w-container-max mx-auto px-margin-desktop py-stack-lg grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md text-on-primary-container mb-4">
+                    El Academy
+                </div>
+<p class="font-body-md text-body-md text-on-primary-container/80 text-sm">
+                    © 2024 El Academy Knowledge Center. All rights reserved.
+                </p>
+</div>
+<div class="md:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8">
+<div class="flex flex-col gap-2">
+<a class="font-label-md text-label-md text-on-primary-container/80 hover:text-on-primary-container transition-colors hover:underline transition-all" href="#">English Classes</a>
+<a class="font-label-md text-label-md text-on-primary-container/80 hover:text-on-primary-container transition-colors hover:underline transition-all" href="#">Spanish Classes</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-label-md text-label-md text-on-primary-container/80 hover:text-on-primary-container transition-colors hover:underline transition-all" href="#">Summer School</a>
+<a class="font-label-md text-label-md text-on-primary-container/80 hover:text-on-primary-container transition-colors hover:underline transition-all" href="#">Classes for School Children</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-label-md text-label-md text-on-primary-container/80 hover:text-on-primary-container transition-colors hover:underline transition-all" href="#">Contact Us</a>
+<a class="font-label-md text-label-md text-on-primary-container/80 hover:text-on-primary-container transition-colors hover:underline transition-all" href="#">Privacy Policy</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
