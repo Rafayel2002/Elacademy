@@ -126,6 +126,70 @@
     transform: translateY(-2px);
   }
 
+  /* Utility Classes for Responsive Visibility */
+  .mobile-only { display: none !important; }
+  .desktop-only { display: inline-flex !important; }
+
+  /* Hamburger Menu Button */
+  .hamburger {
+    width: 28px; height: 20px;
+    flex-direction: column; justify-content: space-between;
+    cursor: pointer; background: transparent; border: none;
+    padding: 0; z-index: 1001;
+  }
+  .hamburger span {
+    display: block; width: 100%; height: 2px;
+    background: var(--white); border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  /* Mobile Drawer Menu */
+  .drawer-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(4px); z-index: 1999;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+  }
+  .drawer-overlay.open { opacity: 1; pointer-events: auto; }
+
+  .mobile-drawer {
+    position: fixed; top: 0; right: -100%; width: 280px; height: 100vh;
+    background: var(--gray); z-index: 2000; box-shadow: -10px 0 40px rgba(0,0,0,0.8);
+    display: flex; flex-direction: column; padding: 30px 24px;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .mobile-drawer.open { right: 0; }
+
+  .drawer-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 40px; padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .drawer-logo { width: 44px; height: 44px; object-fit: contain; filter: drop-shadow(0 0 6px rgba(245,168,0,0.3)); }
+  .drawer-close {
+    background: none; border: none; color: var(--white);
+    font-size: 28px; cursor: pointer; line-height: 1; padding: 5px;
+    transition: color 0.3s;
+  }
+  .drawer-close:hover { color: var(--yellow); }
+
+  .drawer-links { list-style: none; display: flex; flex-direction: column; gap: 24px; }
+  .drawer-links a {
+    color: var(--white); text-decoration: none; font-size: 20px;
+    font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif; transition: color 0.3s;
+  }
+  .drawer-links a:hover { color: var(--yellow); }
+
+  .drawer-contact {
+    margin-top: auto; display: flex; flex-direction: column; gap: 16px;
+    border-top: 1px solid rgba(255,255,255,0.08); padding-top: 30px;
+  }
+  .drawer-contact a {
+    color: #bbb; text-decoration: none; font-size: 14px;
+    display: flex; align-items: center; gap: 12px; transition: color 0.3s;
+  }
+  .drawer-contact a:hover { color: var(--yellow); }
+
   /* HERO */
   #hero {
     min-height: 100vh;
@@ -676,16 +740,16 @@
   }
 
   @media (max-width: 768px) {
+    /* Visibility Toggle */
+    .desktop-only { display: none !important; }
+    .mobile-only { display: flex !important; }
+
     /* Navbar Adjustment */
     nav { padding: 12px 16px; }
     .nav-links { display: none; }
-    
-    /* Logo scaling on mobile to prevent clipping */
     .nav-logo-img { width: 36px; height: 36px; } 
     .nav-logo-text { font-size: 18px; }
-    
     .lang-btn { padding: 6px 10px; font-size: 11px; }
-    .nav-cta { padding: 8px 14px; font-size: 11px; }
 
     /* General Section Padding */
     section { padding: 60px 24px; }
@@ -760,11 +824,38 @@
       <button class="lang-btn active" data-set="es" onclick="setLang('es')">ES</button>
       <button class="lang-btn" data-set="en" onclick="setLang('en')">EN</button>
     </div>
-    <a href="https://wa.me/34626856596" target="_blank" class="nav-cta">
+    
+    <a href="https://wa.me/34626856596" target="_blank" class="nav-cta desktop-only">
       💬 WhatsApp
     </a>
+
+    <button class="hamburger mobile-only" onclick="toggleDrawer()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
 </nav>
+
+<div class="drawer-overlay" id="drawerOverlay" onclick="toggleDrawer()"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <img src="sam.png" class="drawer-logo" alt="SAM Reformas">
+    <button class="drawer-close" onclick="toggleDrawer()">✕</button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="#about" onclick="toggleDrawer()"><span data-lang="es">Nosotros</span><span data-lang="en">About</span></a></li>
+    <li><a href="#services" onclick="toggleDrawer()"><span data-lang="es">Servicios</span><span data-lang="en">Services</span></a></li>
+    <li><a href="#process" onclick="toggleDrawer()"><span data-lang="es">Proceso</span><span data-lang="en">Process</span></a></li>
+    <li><a href="#reviews" onclick="toggleDrawer()"><span data-lang="es">Reseñas</span><span data-lang="en">Reviews</span></a></li>
+    <li><a href="#contact" onclick="toggleDrawer()"><span data-lang="es">Contacto</span><span data-lang="en">Contact</span></a></li>
+  </ul>
+  <div class="drawer-contact">
+    <a href="https://wa.me/34626856596" target="_blank">💬 WhatsApp: (+34) 626 856 596</a>
+    <a href="tel:602602002">📞 <span data-lang="es">Teléfono</span><span data-lang="en">Phone</span>: 602 602 002</a>
+    <a href="mailto:reformas.sam@gmail.com">✉️ Email: reformas.sam@gmail.com</a>
+  </div>
+</div>
 
 <section id="hero">
   <div class="hero-bg"></div>
@@ -1324,6 +1415,12 @@
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
   });
+
+  // MOBILE DRAWER TOGGLE
+  function toggleDrawer() {
+    document.getElementById('mobileDrawer').classList.toggle('open');
+    document.getElementById('drawerOverlay').classList.toggle('open');
+  }
 
   // LANG
   function setLang(lang) {
