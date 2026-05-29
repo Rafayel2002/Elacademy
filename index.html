@@ -118,6 +118,7 @@
     text-decoration: none; text-transform: uppercase;
     transition: all 0.3s;
     box-shadow: 0 0 20px rgba(245,168,0,0.3);
+    display: inline-flex; align-items: center; gap: 6px;
   }
   .nav-cta:hover {
     background: var(--yellow-light);
@@ -678,7 +679,11 @@
     /* Navbar Adjustment */
     nav { padding: 12px 16px; }
     .nav-links { display: none; }
+    
+    /* Logo scaling on mobile to prevent clipping */
+    .nav-logo-img { width: 36px; height: 36px; } 
     .nav-logo-text { font-size: 18px; }
+    
     .lang-btn { padding: 6px 10px; font-size: 11px; }
     .nav-cta { padding: 8px 14px; font-size: 11px; }
 
@@ -740,7 +745,7 @@
 
 <nav id="navbar">
   <a href="#hero" class="nav-logo">
-    <img src="/mnt/user-data/uploads/sam.png" class="nav-logo-img" alt="SAM Reformas Logo" onerror="this.style.display='none'">
+    <img src="tu-logo.png" class="nav-logo-img" alt="SAM Reformas Logo">
     <span class="nav-logo-text">SAM <span>REFORMAS</span></span>
   </a>
   <ul class="nav-links">
@@ -756,7 +761,7 @@
       <button class="lang-btn" data-set="en" onclick="setLang('en')">EN</button>
     </div>
     <a href="https://wa.me/34626856596" target="_blank" class="nav-cta">
-      <span data-lang="es">Presupuesto Gratis</span><span data-lang="en">Free Quote</span>
+      💬 WhatsApp
     </a>
   </div>
 </nav>
@@ -1250,7 +1255,7 @@
   <div class="footer-top">
     <div class="footer-brand">
       <div class="footer-logo">
-        <img src="/mnt/user-data/uploads/sam.png" alt="SAM Reformas" onerror="this.style.display='none'">
+        <img src="tu-logo.png" alt="SAM Reformas">
         <span class="footer-logo-text">SAM <span>REFORMAS</span></span>
       </div>
       <p><span data-lang="es">Los mejores profesionales trabajando para ti. Reformas integrales en el País Vasco con más de 8 años de experiencia.</span><span data-lang="en">The best professionals working for you. Full renovations in the Basque Country with over 8 years of experience.</span></p>
